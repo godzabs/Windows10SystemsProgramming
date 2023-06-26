@@ -1,2 +1,6 @@
-﻿  Chapter1Exercise.cpp
-  Chapter1Exercise.vcxproj -> D:\Chapter1Exercise\Debug\Chapter1Exercise.exe
+﻿  Chapter1Exercise.c
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter1Exercise\Chapter1Exercise\Chapter1Exercise.c(21,35): warning C4047: 'function': 'LPWSTR' differs in levels of indirection from 'LPWSTR [16]'
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter1Exercise\Chapter1Exercise\Chapter1Exercise.c(21,27): warning C4024: 'GetComputerNameW': different types for formal and actual parameter 1
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter1Exercise\Chapter1Exercise\Chapter1Exercise.c(24,13): warning C4477: 'wprintf' : format string '%s' requires an argument of type 'unsigned short *', but variadic argument 1 has type 'LPWSTR *'
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter1Exercise\Chapter1Exercise\Chapter1Exercise.c(44,29): warning C4133: 'function': incompatible types - from 'OSVERSIONINFOEXW *' to 'LPOSVERSIONINFOW'
+  Chapter1Exercise.vcxproj -> D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter1Exercise\Debug\Chapter1Exercise.exe
