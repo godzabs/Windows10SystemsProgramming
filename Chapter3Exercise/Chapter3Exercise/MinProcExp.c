@@ -15,6 +15,7 @@
 
 /*
 Purpose of this function is to enumerate processes using the Toolhelp32Snapshot functions
+it's a void function, returns nothing
 */
 void enumProcesses(void) {
 	HANDLE hProc = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
@@ -37,10 +38,32 @@ void enumProcesses(void) {
 	CloseHandle(hProc);
 	
 }
+
+/*
+	void function to close a PID that is passed in, as long as we can get a handle on it
+*/
+void terminateProcess(DWORD pid) {
+	HANDLE hProc = OpenProcess(PROCESS_TERMINATE,FALSE,pid);
+	if (hProc == NULL) {
+		printf("Failed to get a handle on PID %u, GetLastError() = %d \n", pid, GetLastError());
+	}
+	DWORD exitCode;
+	if (!TerminateProcess(hProc,GetExitCodeProcess(hProc,&exitCode))) {
+		printf("Failed to terminate proceson PID %u, GetLastError() = %d \n\n", pid, GetLastError());
+	}
+	else {
+		printf("Successfully closed PID %u !\n",pid);
+	}
+
+	CloseHandle(hProc);
+
+}
+
 int main(void) {
 
 	int choice = 0;
-	printf("[+] Welcome to the dullest process enumerator!\nWhat would you like to do?: \n");
+	DWORD piD;
+	printf("[+] Welcome to the dullest process explorer!\nWhat would you like to do?: \n");
 
 	do {
 
@@ -51,7 +74,9 @@ int main(void) {
 			enumProcesses();
 			break;
 		case 2: //TODO 2
-			printf("You choose terminate proc\n");
+			printf("\nGive the PID of the process you want to end: ");
+			scanf_s("%ul", &piD);
+			terminateProcess(piD);
 			break;
 		case 3: //TODO 3
 			printf("You choose change priority class\n");
