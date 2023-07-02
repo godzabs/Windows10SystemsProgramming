@@ -59,6 +59,26 @@ void terminateProcess(DWORD pid) {
 
 }
 
+/*
+	void function to change the priority of a PID that is passed in, as long as we can get a handle on it
+*/
+void changePriority(DWORD pid) {
+
+	HANDLE hProc = OpenProcess(PROCESS_SET_INFORMATION, FALSE, pid);
+	if (hProc == NULL) {
+		printf("Failed to get a handle on PID %u, GetLastError() = %d \n", pid, GetLastError());
+	}
+	DWORD exitCode;
+	if (!SetPriorityClass(hProc, BELOW_NORMAL_PRIORITY_CLASS)) {
+		printf("Failed to change the priority class on process on PID %u, GetLastError() = %d \n\n", pid, GetLastError());
+	}
+	else {
+		printf("Successfully change priority of PID %u to BELOW_NORMAL_PRIORITY_CLASS!\n", pid);
+	}
+
+	CloseHandle(hProc);
+}
+
 int main(void) {
 
 	int choice = 0;
@@ -73,13 +93,15 @@ int main(void) {
 		case 1:
 			enumProcesses();
 			break;
-		case 2: //TODO 2
+		case 2:
 			printf("\nGive the PID of the process you want to end: ");
-			scanf_s("%ul", &piD);
+			scanf_s("%u", &piD);
 			terminateProcess(piD);
 			break;
 		case 3: //TODO 3
-			printf("You choose change priority class\n");
+			printf("\nGive the PID of the process you want to change priroity to BELOW_NORMAL_PRIORITY_CLASS: ");
+			scanf_s("%u", &piD);
+			changePriority(piD);
 			break;
 
 			default:
