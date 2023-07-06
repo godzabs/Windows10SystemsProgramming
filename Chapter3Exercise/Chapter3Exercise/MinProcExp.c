@@ -28,6 +28,7 @@ void enumProcesses(void) {
 	if (!Process32First(hProc,&proc))
 	{
 		printf("CreateToolhelp32Snapshot() failed!, GetLastError() = %d\n", GetLastError());
+		return;
 	}
 	do {
 	
@@ -46,6 +47,7 @@ void terminateProcess(DWORD pid) {
 	HANDLE hProc = OpenProcess(PROCESS_TERMINATE,FALSE,pid);
 	if (hProc == NULL) {
 		printf("Failed to get a handle on PID %u, GetLastError() = %d \n", pid, GetLastError());
+		return;
 	}
 	DWORD exitCode;
 	if (!TerminateProcess(hProc,GetExitCodeProcess(hProc,&exitCode))) {
@@ -67,6 +69,7 @@ void changePriority(DWORD pid) {
 	HANDLE hProc = OpenProcess(PROCESS_SET_INFORMATION, FALSE, pid);
 	if (hProc == NULL) {
 		printf("Failed to get a handle on PID %u, GetLastError() = %d \n", pid, GetLastError());
+		return;
 	}
 	DWORD exitCode;
 	if (!SetPriorityClass(hProc, BELOW_NORMAL_PRIORITY_CLASS)) {
@@ -98,7 +101,7 @@ int main(void) {
 			scanf_s("%u", &piD);
 			terminateProcess(piD);
 			break;
-		case 3: //TODO 3
+		case 3: 
 			printf("\nGive the PID of the process you want to change priroity to BELOW_NORMAL_PRIORITY_CLASS: ");
 			scanf_s("%u", &piD);
 			changePriority(piD);

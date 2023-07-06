@@ -1,0 +1,10 @@
+﻿  MemLimit.c
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(45,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'SIZE_T'
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(45,9): message : consider using '%lld' in the format string
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(45,9): message : consider using '%Id' in the format string
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(45,9): message : consider using '%I64d' in the format string
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(65,10): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'SIZE_T'
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(65,10): message : consider using '%lld' in the format string
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(65,10): message : consider using '%Id' in the format string
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\Chapter4Exercise\MemLimit.c(65,10): message : consider using '%I64d' in the format string
+  Chapter4Exercise.vcxproj -> D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter4Exercise\x64\Debug\Chapter4Exercise.exe
