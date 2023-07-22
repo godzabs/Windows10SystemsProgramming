@@ -1,2 +1,3 @@
 ﻿  chapter7Exercise.c
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter7Exercise\Chapter7Exercise\chapter7Exercise.c(99,8): warning C4101: 'tid': unreferenced local variable
   Chapter7Exercise.vcxproj -> D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter7Exercise\Debug\Chapter7Exercise.exe
