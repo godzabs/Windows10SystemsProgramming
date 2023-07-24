@@ -1,0 +1,5 @@
+﻿  chapter8Exercise.c
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter8Exercise\Chapter8Exercise\chapter8Exercise.c(20,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter8Exercise\Chapter8Exercise\chapter8Exercise.c(22,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'int *'
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter8Exercise\Chapter8Exercise\chapter8Exercise.c(67,51): warning C4022: 'CreateThread': pointer mismatch for actual parameter 4
+  Chapter8Exercise.vcxproj -> D:\Windows10SystemsProgramming\Windows10SystemsProgramming\Chapter8Exercise\Debug\Chapter8Exercise.exe
