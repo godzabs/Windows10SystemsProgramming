@@ -1,0 +1,3 @@
+﻿  source.c
+D:\Windows10SystemsProgramming\Windows10SystemsProgramming\FindFile\FindFile\source.c(46,16): warning C4129: 'C': unrecognized character escape sequence
+  FindFile.vcxproj -> D:\Windows10SystemsProgramming\Windows10SystemsProgramming\FindFile\Debug\FindFile.exe
