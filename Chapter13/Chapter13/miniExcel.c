@@ -75,6 +75,7 @@ int main(void) {
             onRead(c, d);
             break;
         case 3:
+            VirtualFree(m_address,TotalSize,MEM_DECOMMIT);
             exit(0);
             break;
 
